@@ -3,7 +3,7 @@ package introspection
 import "github.com/gophercloud/gophercloud"
 
 func listIntrospectionsURL(client *gophercloud.ServiceClient) string {
-	return client.ServiceURL("introspection")
+	return client.ServiceURL("v1/introspection")
 }
 
 func introspectionURL(client *gophercloud.ServiceClient, nodeID string) string {
