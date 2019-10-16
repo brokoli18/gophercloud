@@ -7,17 +7,17 @@ func listIntrospectionsURL(client *gophercloud.ServiceClient) string {
 }
 
 func introspectionURL(client *gophercloud.ServiceClient, nodeID string) string {
-	return client.ServiceURL("introspection", nodeID)
+	return client.ServiceURL("v1/introspection", nodeID)
 }
 
 func abortIntrospectionURL(client *gophercloud.ServiceClient, nodeID string) string {
-	return client.ServiceURL("introspection", nodeID, "abort")
+	return client.ServiceURL("v1/introspection", nodeID, "abort")
 }
 
 func introspectionDataURL(client *gophercloud.ServiceClient, nodeID string) string {
-	return client.ServiceURL("introspection", nodeID, "data")
+	return client.ServiceURL("v1/introspection", nodeID, "data")
 }
 
 func introspectionUnprocessedDataURL(client *gophercloud.ServiceClient, nodeID string) string {
-	return client.ServiceURL("introspection", nodeID, "data", "unprocessed")
+	return client.ServiceURL("v1/introspection", nodeID, "data", "unprocessed")
 }
